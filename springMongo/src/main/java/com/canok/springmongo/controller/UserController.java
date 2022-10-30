@@ -24,5 +24,17 @@ public class UserController {
         return ResponseEntity.ok(userService.findUserByCountry(country));
     }
 
+    @GetMapping("count-by-country")
+    public ResponseEntity<?> countByCountry()
+    {
+        return ResponseEntity.ok(userService.countByCountry());
+    }
+
+    @GetMapping("group-by-country")
+    public ResponseEntity<?> groupByCountry()
+    {
+        return ResponseEntity.ok(userService.groupByCountry());
+    }
+
 
 }

@@ -2,6 +2,8 @@ package com.canok.springmongo.service;
 
 
 import com.canok.springmongo.entity.User;
+import com.canok.springmongo.projection.CountryAggregation;
+import com.canok.springmongo.projection.UserAggregation;
 import com.canok.springmongo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +26,15 @@ public class UserService implements IUserService{
         return userRepository.findByCountryAsCustom(country);
     }
 
-    //public List<UserAggregation> groupByCountry()
+    @Override
+    public List<UserAggregation> groupByCountry(){
+
+        return userRepository.groupByCountry();
+    }
+
+    @Override
+    public List<CountryAggregation> countByCountry(){
+        return userRepository.countByCountry();
+    }
 
 }

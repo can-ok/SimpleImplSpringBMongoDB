@@ -4,12 +4,14 @@ package com.canok.springmongo.dto;
 import com.canok.springmongo.entity.Gender;
 import com.canok.springmongo.entity.User;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class UserDto {
 
     private String name;
